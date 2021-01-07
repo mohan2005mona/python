@@ -27,3 +27,19 @@ for element in list:
 #looking for sel in guru_99: sel :Found
 #looking for sel in guru99 give :not found
 #looking for sel in guru selenium :Found    
+
+import re
+list=['guru_99: sel','guru99 give','guru selenium']
+string=input('what you want to find :')
+for element in list:
+    print('looking for {} in {} :'.format(string,element),end='')
+    if re.search(string,element):
+        print('Found')
+    else:
+        print('not found')
+
+'''what you want to find :selenium
+looking for selenium in guru_99: sel :not found
+looking for selenium in guru99 give :not found
+looking for selenium in guru selenium :Found
+'''
