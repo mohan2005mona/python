@@ -58,3 +58,15 @@ for email in emails:
 #guru9r9@google.com
 #carrerguru99@hotmail.com
 #user@gmail.com
+
+import re
+abc='guru9..r9@google.com, carrerguru99@hotmail.com, user@gmail.com'
+emails=re.findall(r'[\w\.-]+@[\w\.-]+',abc)
+for email in emails:
+    print(email)
+
+#re.split function
+import re
+x='I love cats pet:cat i love cows, pet:cow thank you'
+y=re.split('pet:\w+',x)
+print(y)    
