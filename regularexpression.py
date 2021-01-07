@@ -47,3 +47,14 @@ import re
 tar='pet:cat i love cats pet:cow i love cow'
 z=re.search('\w+\Wcow',tar)
 print(z.group())
+
+
+import re
+abc='guru9r9@google.com, carrerguru99@hotmail.com, user@gmail.com'
+emails=re.findall(r'[\w\.-]+@[\w\.-]+',abc)
+for email in emails:
+    print(email)
+
+#guru9r9@google.com
+#carrerguru99@hotmail.com
+#user@gmail.com
