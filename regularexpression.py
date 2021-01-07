@@ -43,3 +43,7 @@ looking for selenium in guru_99: sel :not found
 looking for selenium in guru99 give :not found
 looking for selenium in guru selenium :Found
 '''
+import re
+tar='pet:cat i love cats pet:cow i love cow'
+z=re.search('\w+\Wcow',tar)
+print(z.group())
