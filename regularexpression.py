@@ -13,3 +13,17 @@ print(type(z))
 #('guru99', 'give')
 #<class 'NoneType'>
 
+import re
+list=['guru_99: sel','guru99 give','guru selenium']
+string='sel'
+for element in list:
+    print('looking for {} in {} :'.format(string,element),end='')
+    if re.search(string,element):
+        print('Found')
+    else:
+        print('not found')
+    
+##C:\Users\mohan.v\PycharmProjects\PythonPrograms\venv\Scripts\python.exe C:/Users/mohan.v/PycharmProjects/PythonPrograms/mohan.py
+#looking for sel in guru_99: sel :Found
+#looking for sel in guru99 give :not found
+#looking for sel in guru selenium :Found    
