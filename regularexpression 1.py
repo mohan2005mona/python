@@ -47,7 +47,7 @@ import re
 def square(x):
     return (x ** 2)
 string= 'Dan has 3 snails. Mike has 4 cats. Alisa has 9 monkeys.'
-#x=re.sub('(\d+)',lambda x: str(x),string)
+#x=re.sub('(\d+)',lambda x: str(x),string)    --> this line finds the matching digit objects and again prints back the same thing. this is to illustrate about lamba
 x=re.sub('(\d+)',lambda x: str(square(int(x.group(0)))),string)
 print(x)
 
