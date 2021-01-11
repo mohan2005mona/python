@@ -40,3 +40,13 @@ str= 'Dan has 3 snails. Mike has 4 cats. Alisa has 9 monkeys.'
 i=re.search('\d+',str)  # --> prints only 3 because search functions check all the strings and prints only the first occurance of the string
 i=re.findall('\d+',str)  # --> this prints 3,4,9 as findall finds all the occurances
 print(i)
+
+#---------------------------------------------------------------------------------------------------------------------------
+import re
+def square(x):
+    return (x ** 2)
+string= 'Dan has 3 snails. Mike has 4 cats. Alisa has 9 monkeys.'
+#x=re.sub('(\d+)',lambda x: str(x),string)
+x=re.sub('(\d+)',lambda x: str(square(int(x.group(0)))),string)
+print(x)
+
