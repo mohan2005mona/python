@@ -42,6 +42,7 @@ i=re.findall('\d+',str)  # --> this prints 3,4,9 as findall finds all the occura
 print(i)
 
 #---------------------------------------------------------------------------------------------------------------------------
+#this program is to square the numbers which are available in the strings and also used a function.
 import re
 def square(x):
     return (x ** 2)
