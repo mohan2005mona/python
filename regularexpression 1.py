@@ -21,3 +21,13 @@ result=re.sub(r'-',' ',re.sub(r'#.*','',str))
 print(result)
 result=re.sub(r'\D',' ',re.sub(r'#.*','',str))
 print(result)
+
+# Program to replace the string pattern with other pattern - here we are using multiple combination of pattern to search and replace with the string
+import re
+str= '''U.S. stock-index futures pointed 
+to a solidly higher open on Monday,
+indicating that major
+benchmarks were poised to USA reboundfrom last week's sharp decline,
+\nwhich represented their biggest weekly drops in months.'''
+i=re.sub(r'USA|U.S.|US','United States',str)
+print(i)
