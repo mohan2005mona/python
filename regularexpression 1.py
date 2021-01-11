@@ -51,3 +51,30 @@ string= 'Dan has 3 snails. Mike has 4 cats. Alisa has 9 monkeys.'
 x=re.sub('(\d+)',lambda x: str(square(int(x.group(0)))),string)
 print(x)
 
+import re
+input="eat 9laugh sleep study"
+final=re.sub('\w+',lambda m: str(m.group()) +'ing',input)
+print(final)
+
+#printing duplicate entries - \1 prints the duplicate strings which are in consecutive in nature
+txt='''
+hello hello
+how are are how you
+bye bye
+'''
+x=re.compile(r'(\w+) \1')
+print(x.findall(txt))
+
+
+#backreferencing
+import re
+string="Merry Merry Christmas"
+x=re.sub(r'(\w+) \1',r'Happy \1',string)
+print(x)
+#Output : Happy Merry Christmas
+
+import re
+string="Merry Merry Christmas"
+x=re.sub(r'(\w+) \1',r'Happy',string)
+print(x)
+#Output : Happy Christmas
