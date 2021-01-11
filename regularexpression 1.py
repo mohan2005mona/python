@@ -31,3 +31,12 @@ benchmarks were poised to USA reboundfrom last week's sharp decline,
 \nwhich represented their biggest weekly drops in months.'''
 i=re.sub(r'USA|U.S.|US','United States',str)
 print(i)
+
+str= 'Dan has 3 snails. Mike has 4 cats. Alisa has 9 monkeys.'
+re.search('\d+',str).group()
+
+------>
+str= 'Dan has 3 snails. Mike has 4 cats. Alisa has 9 monkeys.'
+i=re.search('\d+',str)  # --> prints only 3 because search functions check all the strings and prints only the first occurance of the string
+i=re.findall('\d+',str)  # --> this prints 3,4,9 as findall finds all the occurances
+print(i)
