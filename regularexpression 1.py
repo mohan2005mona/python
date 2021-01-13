@@ -78,3 +78,14 @@ string="Merry Merry Christmas"
 x=re.sub(r'(\w+) \1',r'Happy',string)
 print(x)
 #Output : Happy Christmas
+
+#_---------------------------------------------------------------------------
+import re
+txt='''
+C:\Windows
+C:\Python
+C:\Windows\System32
+'''
+pattern=re.compile(input('enter the pattern you want to search'))
+#pattern=re.compile(r'C:\\Windows\\System32')
+print(pattern.search(txt))
