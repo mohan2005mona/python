@@ -146,3 +146,30 @@ txt='''
 65111
 '''
 print(re.findall('\d{4,}',txt))
+
+# in case if i have to filter the numbers which has maximum number 4.  re.findall('\d{,4})
+
+#In thegiven text,filter out all 4 or more digit numbers.
+import re
+txt='''
+123143
+432
+5657
+4435
+54
+65111
+'''
+#print(re.findall('\d{4,}',txt))
+print(re.findall('\d{1,4}',txt))  --> this is used list out 4 charcters excluding space otherwise it starts from 0 and treat space as separtae character
+
+#write a pattern to validate telephone numbers.
+#Telephone numbers can be of the form : 555-555-5555,555 555 5555
+#5555555555
+import re
+txt='''
+555-555-5555
+555 555 5555
+5555555555
+'''
+#print(re.findall('\d{4,}',txt))
+print(re.findall('\d{3}[\s\-]?\d{3}[\s\-]?\d{4}',txt))
