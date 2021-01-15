@@ -173,3 +173,40 @@ txt='''
 '''
 #print(re.findall('\d{4,}',txt))
 print(re.findall('\d{3}[\s\-]?\d{3}[\s\-]?\d{4}',txt))
+
+##End of quantifiers.
+
+##BELOW PROGRAM IS NOT WORKING
+##Greedy Behaviour
+import re
+txt='''<html><head><title>Title</title>'''
+print(re.findall("<.*>"),txt)
+print(re.findall("<.*?>"),txt)  # treat each match found as separate entity
+
+##Bounday \b operations
+import re
+txt=''' you are trying to find all the and or the symbols
+in the text but the and or for band is theft by a former
+'''
+print(re.findall('\\b(and|or|the)\\b',txt))  ## boundary matches
+
+##consider a scenario where we want to find all the lines
+##in the given text which start with the pattern.
+import re
+txt=''' 
+Name:
+age: 0
+Roll No :15
+Grade : S
+
+Name: Ravi 
+Age : -1
+Roll No : 123 Name :ABC
+Grade : k
+
+Name: Ram
+Age : N/A
+Roll No : 1
+Grade: G
+'''
+print(re.findall('^Name:.*',txt,flags=re.M))
