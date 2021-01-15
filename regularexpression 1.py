@@ -96,4 +96,6 @@ txt='''
 I have 2 dogs. one dog is 1 year old and other one is 2 years old. Both 
 dogs are very cute!
 '''
-print(re.findall('dog[s]?',txt))
+print(re.findall('dogs?',txt))
+## the regular expression can also be like this re.findall(dog|dogs)... but the output will not find dogs as complete string instead it will only find "dog" matching string
+##first hence dogs will not be in the result.. the result set is [dog,dog,dog] instead of [dog,dogs,dog]
