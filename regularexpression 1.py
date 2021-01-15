@@ -99,3 +99,50 @@ dogs are very cute!
 print(re.findall('dogs?',txt))
 ## the regular expression can also be like this re.findall(dog|dogs)... but the output will not find dogs as complete string instead it will only find "dog" matching string
 ##first hence dogs will not be in the result.. the result set is [dog,dog,dog] instead of [dog,dogs,dog]
+
+#find all filenames starting with file and ending with .txt
+import re
+txt='''
+file1.txt
+file_one.txt
+file.txt
+fil.txt
+file.xml
+'''
+print(re.findall('file\w*\.txt',txt))
+
+
+##find all filenames starting with file and ending with .txt - plus(+) quantifiers
+import re
+txt='''
+file1.txt
+file_one.txt
+fil89e.txt
+fil.txt
+file23.xml
+file.txt
+'''
+print(re.findall('file\d+\.txt',txt))
+
+#find years in the given text.
+import re
+txt='''
+The first season of Indian Premiere League (IPL) was played in 2008.
+The second season was played in 2009 in South Africe.
+Last season was played in 2018  and won by Chennai Super Kings(CSK).
+CSL won the title in 2010 and 2011 as well.
+Mumbai Indians (MI) has also won the title 3 times in 2013, 2015 and 2017.
+'''
+print(re.findall('[1-9]\d{3}',txt))
+
+#In thegiven text,filter out all 4 or more digit numbers.
+import re
+txt='''
+123143
+432
+5657
+4435
+54
+65111
+'''
+print(re.findall('\d{4,}',txt))
