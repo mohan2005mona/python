@@ -89,3 +89,11 @@ C:\Windows\System32
 pattern=re.compile(input('enter the pattern you want to search'))
 #pattern=re.compile(r'C:\\Windows\\System32')
 print(pattern.search(txt))
+
+#find all the matches for dog and dogs in the given text
+import re
+txt='''
+I have 2 dogs. one dog is 1 year old and other one is 2 years old. Both 
+dogs are very cute!
+'''
+print(re.findall('dog[s]?',txt))
